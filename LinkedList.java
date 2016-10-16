@@ -60,6 +60,35 @@ class LinkedList
         
         System.out.println("NULL");
     }
+ public static void main(String [] args)
+    {
+       /* LinkedList llist = new LinkedList();
+        for (int i=5; i>0; --i)
+        {
+  
+            llist.push(i);
+            llist.printList();
+            llist.printMiddle();
+            
+        }*/
+                  LinkedList llist = new LinkedList();
+            Scanner inp = new Scanner(System.in);
+            System.out.println("Number of nodes in the list");
+            int numNodes = inp.nextInt();
+            String listValue;
+            System.out.println("Insertion takes place at the beginning of the LIST");
+            for (int i=numNodes; i>0; --i)
+            {
+                System.out.println("Enter the node " + numNodes + " of the list");
+                listValue = inp.next();
+                llist.push(listValue);
+                llist.printList();
+                numNodes--;
+            }
+             
+           llist.printMiddle();
+           llist.printReverse(llist.head);
+    }
 }
  
    
